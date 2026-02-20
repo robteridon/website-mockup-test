@@ -68,6 +68,11 @@ const mainMenuItems = [
       { label: "Publications", href: "https://www.idinsight.org/ideas-and-insights/publications-2/" },
     ],
   },
+  {
+    label: "Year in Review",
+    href: "/year-in-review",
+    children: [],
+  },
 ];
 
 const topLinks = [

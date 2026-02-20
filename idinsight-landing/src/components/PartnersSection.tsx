@@ -37,8 +37,12 @@ const partners = [
 
 export default function PartnersSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCount = 2;
-  const maxIndex = partners.length - visibleCount;
+  const slidesPerView = 2;
+  const totalSlides = partners.length;
+  const maxIndex = totalSlides - slidesPerView;
+
+  const prev = () => setCurrentIndex(Math.max(0, currentIndex - 1));
+  const next = () => setCurrentIndex(Math.min(maxIndex, currentIndex + 1));
 
   return (
     <section className="py-16 lg:py-24">
@@ -47,54 +51,66 @@ export default function PartnersSection() {
           How we work with partners:
         </h2>
 
-        {/* Desktop carousel */}
+        {/* Carousel */}
         <div className="relative">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out gap-6"
-              style={{ transform: `translateX(-${currentIndex * (100 / visibleCount + 2)}%)` }}
-            >
-              {partners.map((partner) => (
-                <a
-                  key={partner.title}
-                  href={partner.href}
-                  className="group block flex-shrink-0 w-full sm:w-[calc(50%-12px)] rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-shadow"
-                >
-                  <div className="aspect-video">
-                    <img
-                      src={partner.image}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-navy mb-2 group-hover:text-gold transition-colors">
-                      {partner.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {partner.description}
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation buttons */}
+          {/* Previous button */}
           <button
-            onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
+            onClick={prev}
             disabled={currentIndex === 0}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="absolute -left-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Previous"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
+
+          {/* Slides container */}
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * (100 / slidesPerView)}%)`,
+              }}
+            >
+              {partners.map((partner) => (
+                <div
+                  key={partner.title}
+                  className="flex-shrink-0 px-3"
+                  style={{ width: `${100 / slidesPerView}%` }}
+                >
+                  <a
+                    href={partner.href}
+                    className="group block overflow-hidden"
+                  >
+                    <div className="relative overflow-hidden" style={{ paddingTop: "56.25%" }}>
+                      <img
+                        src={partner.image}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="pt-4">
+                      <div className="mb-2">
+                        <h3 className="text-lg font-bold text-navy inline bg-[length:0_2px] bg-[position:0_100%] bg-no-repeat bg-gradient-to-r from-gold to-gold group-hover:bg-[length:100%_2px] transition-[background-size] duration-200 pb-0.5">
+                          {partner.title}
+                        </h3>
+                      </div>
+                      <p className="text-sm text-[#212e38] leading-relaxed">
+                        {partner.description}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Next button */}
           <button
-            onClick={() => setCurrentIndex(Math.min(maxIndex, currentIndex + 1))}
+            onClick={next}
             disabled={currentIndex >= maxIndex}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="absolute -right-5 top-1/3 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Next"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

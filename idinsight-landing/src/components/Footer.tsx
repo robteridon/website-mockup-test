@@ -50,56 +50,49 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid lg:grid-cols-4 gap-10">
-          {/* Logo & slogan */}
-          <div className="lg:col-span-1">
-            <a href="https://www.idinsight.org/" className="block mb-4">
-              <svg viewBox="0 0 180 40" className="h-10 w-auto" aria-label="IDinsight logo">
-                <text x="0" y="30" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="28" fill="white">
+    <footer className="bg-navy text-white pt-16 pb-8 lg:pt-16 lg:pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-7">
+          {/* Logo & slogan - columns 1-3 */}
+          <div className="lg:col-span-3">
+            <a href="https://www.idinsight.org/" className="block hover:text-gold transition-colors" title="Go to homepage">
+              <svg viewBox="0 0 164 40" className="h-6 w-auto" aria-label="IDinsight">
+                <text
+                  x="0"
+                  y="29"
+                  fontFamily="Inter, sans-serif"
+                  fontWeight="700"
+                  fontSize="24"
+                  letterSpacing="-0.5"
+                  fill="currentColor"
+                >
                   IDinsight
                 </text>
               </svg>
             </a>
-            <p className="text-white/70 text-sm">
+            <p className="text-xs text-white/70 mt-4 leading-[15px]">
               Improving lives with data and evidence
             </p>
           </div>
 
-          {/* Quick links */}
-          <div className="lg:col-span-1">
-            <ul className="space-y-2">
-              {quickLinks.slice(0, 4).map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+          {/* Quick links - columns 4-7 */}
+          <div className="lg:col-span-4">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-xs font-bold text-white hover:text-gold transition-colors"
+                >
+                  {link.label}
+                </a>
               ))}
-            </ul>
-          </div>
-          <div className="lg:col-span-1">
-            <ul className="space-y-2">
-              {quickLinks.slice(4).map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Social & credit */}
-          <div className="lg:col-span-1">
-            <p className="text-sm text-white/70 mb-4">Follow us on social media</p>
+          {/* Social, credit, award - columns 8-12 */}
+          <div className="lg:col-span-5">
+            <p className="text-xs text-white/70 mb-3">Follow us on social media</p>
             <div className="flex gap-3 mb-6">
               {socialLinks.map((social) => (
                 <a
@@ -107,7 +100,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-gold transition-colors"
+                  className="text-white hover:text-gold transition-colors"
                   title={social.label}
                 >
                   {social.icon}
@@ -115,29 +108,40 @@ export default function Footer() {
               ))}
             </div>
 
-            <a
-              href="https://www.guidestar.org/profile/27-4933181"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-xs text-white/50 hover:text-white/70 transition-colors"
-            >
-              GuideStar Platinum Seal of Transparency
-            </a>
-          </div>
-        </div>
+            <p className="text-xs text-white/50 mb-4">
+              Design and development by{" "}
+              <a
+                href="https://www.designbysoapbox.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/70 transition-colors"
+              >
+                Soapbox
+              </a>
+            </p>
 
-        <div className="border-t border-white/10 mt-10 pt-6 text-center">
-          <p className="text-xs text-white/40">
-            Design and development by{" "}
-            <a
-              href="https://www.designbysoapbox.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white/70 transition-colors"
-            >
-              Soapbox
-            </a>
-          </p>
+            <div>
+              <a
+                href="https://www.guidestar.org/profile/27-4933181"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-white hover:text-gold transition-colors block mb-2"
+              >
+                GuideStar Platinum Seal of Transparency
+              </a>
+              <a
+                href="https://www.guidestar.org/profile/27-4933181"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://www.idinsight.org/wp-content/uploads/2024/03/candid-seal-platinum-2024-150x150.png"
+                  alt="GuideStar Platinum Seal"
+                  className="w-[75px] h-[75px]"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

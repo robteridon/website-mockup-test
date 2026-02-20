@@ -70,12 +70,29 @@ const mainMenuItems = [
   },
 ];
 
-const secondaryLinks = [
+const topLinks = [
   { label: "2025 Year in Review", href: "https://year-in-review.idinsight.org/2025/" },
   { label: "IDeas Blog", href: "https://www.idinsight.org/ideas-and-insights/blog/" },
   { label: "Careers", href: "https://www.idinsight.org/about/careers/" },
-  { label: "Support our work", href: "https://www.idinsight.org/give/" },
 ];
+
+function IDinsightLogo({ className = "", fill = "#1c2f62" }: { className?: string; fill?: string }) {
+  return (
+    <svg viewBox="0 0 164 40" className={className} aria-label="IDinsight" role="img">
+      <text
+        x="0"
+        y="29"
+        fontFamily="Inter, sans-serif"
+        fontWeight="700"
+        fontSize="24"
+        letterSpacing="-0.5"
+        fill={fill}
+      >
+        IDinsight
+      </text>
+    </svg>
+  );
+}
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -83,19 +100,39 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
+      {/* Top bar with secondary links */}
+      <div className="hidden lg:block border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-end gap-5 h-9">
+            {topLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-xs text-gray-500 hover:text-navy transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="https://www.idinsight.org/give/"
+              className="text-xs font-semibold text-gold hover:text-gold-light transition-colors"
+            >
+              Donate
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo */}
           <a href="https://www.idinsight.org/" className="flex-shrink-0" title="Go to homepage">
-            <svg viewBox="0 0 180 40" className="h-10 w-auto" aria-label="IDinsight logo">
-              <text x="0" y="30" fontFamily="Inter, sans-serif" fontWeight="700" fontSize="28" fill="#1c2f62">
-                IDinsight
-              </text>
-            </svg>
+            <IDinsightLogo className="h-8 w-auto lg:h-10" />
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
             {mainMenuItems.map((item, idx) => (
               <div
                 key={item.label}
@@ -126,22 +163,11 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right side */}
-          <div className="hidden lg:flex items-center gap-4">
-            <div className="flex items-center gap-3 text-xs text-gray-500">
-              {secondaryLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="hover:text-navy transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
+          {/* Desktop donate button */}
+          <div className="hidden lg:block">
             <a
               href="https://www.idinsight.org/give/"
-              className="ml-2 inline-flex items-center px-5 py-2 rounded-full bg-gold text-white text-sm font-semibold hover:bg-gold-light transition-colors"
+              className="inline-flex items-center px-6 py-2.5 rounded-full bg-navy text-white text-sm font-semibold hover:bg-navy-light transition-colors"
             >
               Donate
             </a>
@@ -201,10 +227,15 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <div className="border-t border-gray-100 pt-4 mt-4">
+            <div className="border-t border-gray-100 pt-4 mt-4 space-y-2">
+              {topLinks.map((link) => (
+                <a key={link.label} href={link.href} className="block px-3 py-2 text-sm text-gray-600">
+                  {link.label}
+                </a>
+              ))}
               <a
                 href="https://www.idinsight.org/give/"
-                className="block w-full text-center px-5 py-3 rounded-full bg-gold text-white font-semibold"
+                className="block w-full text-center px-5 py-3 rounded-full bg-navy text-white font-semibold mt-3"
               >
                 Donate
               </a>

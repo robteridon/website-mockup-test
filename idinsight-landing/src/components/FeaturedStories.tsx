@@ -38,10 +38,10 @@ const featuredItems = [
   },
 ];
 
-function ChevronRight({ className = "w-4 h-4" }: { className?: string }) {
+function Chevron({ className = "w-3 h-3" }: { className?: string }) {
   return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+    <svg className={className} viewBox="0 0 6 9" fill="currentColor">
+      <path d="M1.4 0L0 1.4l3.2 3.1L0 7.6 1.4 9 6 4.5 1.4 0z" />
     </svg>
   );
 }
@@ -52,55 +52,63 @@ export default function FeaturedStories() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-10">Featured stories</h2>
 
-        {/* Featured main story */}
+        {/* Featured main story - banner card */}
         <a
           href={featuredMain.href}
-          className="group block mb-10 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow"
+          className="group block mb-8 overflow-hidden"
         >
-          <div className="grid md:grid-cols-2">
-            <div className="relative aspect-video md:aspect-auto">
+          <div className="grid md:grid-cols-2 gap-7">
+            <div className="relative overflow-hidden" style={{ paddingTop: "56.25%" }}>
               <img
                 src={featuredMain.image}
                 alt=""
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-90"
               />
-              <span className="absolute top-4 left-4 px-3 py-1 bg-navy text-white text-xs font-semibold rounded-full">
+              <span className="absolute top-0 left-0 px-2 py-1.5 bg-gold text-[#212e38] text-[11px] font-bold leading-none">
                 {featuredMain.type}
               </span>
             </div>
-            <div className="p-8 lg:p-12 flex flex-col justify-center">
-              <h3 className="text-2xl lg:text-3xl font-bold text-navy mb-3 group-hover:text-gold transition-colors">
-                {featuredMain.title}
-              </h3>
-              <p className="text-sm text-gray-500 mb-3">{featuredMain.date}</p>
-              <p className="text-gray-600 mb-6">{featuredMain.description}</p>
-              <span className="inline-flex items-center gap-2 text-navy font-semibold group-hover:text-gold transition-colors">
-                Read more
-                <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </span>
+            <div className="flex flex-col justify-center">
+              <div className="my-3">
+                <h3 className="text-xl lg:text-[20px] font-bold text-navy leading-7 inline bg-[length:0_2px] bg-[position:0_100%] bg-no-repeat bg-gradient-to-r from-gold to-gold group-hover:bg-[length:100%_2px] transition-[background-size] duration-200 pb-0.5">
+                  {featuredMain.title}
+                </h3>
+              </div>
+              <p className="text-xs text-[#626b73]">{featuredMain.date}</p>
+              <p className="text-[15px] font-medium text-[#212e38] mt-3 leading-6">{featuredMain.description}</p>
+              <div className="mt-4 flex items-center gap-2 text-navy font-bold text-sm">
+                <span>Read more</span>
+                <Chevron className="w-2.5 h-2.5 transition-transform group-hover:translate-x-1" />
+              </div>
             </div>
           </div>
         </a>
 
         {/* Secondary stories grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
           {featuredItems.map((item) => (
             <a
               key={item.title}
               href={item.href}
-              className="group block rounded-xl overflow-hidden bg-white shadow hover:shadow-lg transition-shadow"
+              className="group block overflow-hidden"
             >
-              <div className="relative aspect-video">
-                <img src={item.image} alt="" className="w-full h-full object-cover" />
-                <span className="absolute top-3 left-3 px-2.5 py-0.5 bg-navy text-white text-xs font-semibold rounded-full">
+              <div className="relative overflow-hidden" style={{ paddingTop: "56.25%" }}>
+                <img
+                  src={item.image}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity group-hover:opacity-90"
+                />
+                <span className="absolute top-0 left-0 px-2 py-1.5 bg-gold text-[#212e38] text-[11px] font-bold leading-none">
                   {item.type}
                 </span>
               </div>
-              <div className="p-5">
-                <h3 className="text-sm font-bold text-navy mb-2 group-hover:text-gold transition-colors line-clamp-3">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-gray-500">{item.date}</p>
+              <div className="pt-2">
+                <div className="my-2.5">
+                  <h3 className="text-sm font-bold text-navy leading-5 inline bg-[length:0_2px] bg-[position:0_100%] bg-no-repeat bg-gradient-to-r from-gold to-gold group-hover:bg-[length:100%_2px] transition-[background-size] duration-200 pb-0.5">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-xs text-[#626b73]">{item.date}</p>
               </div>
             </a>
           ))}

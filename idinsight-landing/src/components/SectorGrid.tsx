@@ -46,34 +46,37 @@ const sectors = [
   },
 ];
 
+function ChevronCircle() {
+  return (
+    <span className="inline-flex items-center justify-center w-[18px] h-[18px] rounded-full bg-navy text-white ml-2 -translate-y-0.5 group-hover:bg-gold transition-colors flex-shrink-0">
+      <svg className="w-2 h-2" viewBox="0 0 6 9" fill="currentColor">
+        <path d="M1.4 0L0 1.4l3.2 3.1L0 7.6 1.4 9 6 4.5 1.4 0z" />
+      </svg>
+    </span>
+  );
+}
+
 export default function SectorGrid() {
   return (
-    <section className="py-16 lg:py-24 bg-gray-warm">
+    <section className="py-12 lg:py-14 bg-[#f2f2f5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-10">
           Sectors in which we work
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-8">
           {sectors.map((sector) => (
             <a
               key={sector.title}
               href={sector.href}
-              className="group block bg-white rounded-xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+              className="group block"
             >
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-bold text-navy group-hover:text-gold transition-colors">
+              <div className="inline">
+                <h3 className="text-[17px] lg:text-xl font-bold text-navy leading-7 inline bg-[length:0_2px] bg-[position:0_100%] bg-no-repeat bg-gradient-to-r from-gold to-gold group-hover:bg-[length:100%_2px] transition-[background-size] duration-300 pb-0.5">
                   {sector.title}
                 </h3>
-                <svg
-                  className="w-5 h-5 text-navy opacity-50 group-hover:opacity-100 group-hover:text-gold transition-all group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ChevronCircle />
               </div>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-[15px] font-medium text-[#212e38] leading-6 pt-4">
                 {sector.description}
               </p>
             </a>

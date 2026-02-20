@@ -51,47 +51,48 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-16 lg:py-24 bg-navy">
+    <section className="py-10 lg:py-12 bg-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-10">
           Meet our team
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-10">
           {team.map((person) => (
             <a
               key={person.name}
               href={person.href}
-              className="group block text-center"
+              className="group block"
             >
-              <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto mb-4 rounded-full overflow-hidden bg-white/10 ring-2 ring-white/20 group-hover:ring-gold transition-all">
+              <div className="relative overflow-hidden" style={{ paddingTop: "100%" }}>
                 <img
                   src={person.image}
                   alt={person.name}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover grayscale"
                 />
               </div>
-              <h3 className="text-white font-semibold text-sm lg:text-base group-hover:text-gold transition-colors">
-                {person.name}
-              </h3>
-              <p className="text-white/70 text-xs lg:text-sm mt-1">
-                {person.title}
-              </p>
+              <div className="mt-3">
+                <h3 className="text-sm lg:text-[17px] font-bold text-white leading-snug group-hover:text-gold transition-colors duration-200">
+                  {person.name}
+                </h3>
+                <span className="text-sm lg:text-[15px] text-white/80 mt-1 block leading-6">
+                  {person.title}
+                </span>
+              </div>
             </a>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-10 lg:mt-12">
           <a
             href="https://www.idinsight.org/about/our-people/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white text-white font-semibold hover:bg-white hover:text-navy transition-all group"
+            className="inline-flex items-center gap-3 px-5 py-3 bg-[#212e38] text-white text-sm font-bold hover:bg-[#2d3d4d] transition-colors group"
           >
-            View All
+            <span>View All</span>
             <svg
-              className="w-5 h-5 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+              className="w-2.5 h-2.5 transition-transform group-hover:translate-x-1"
+              viewBox="0 0 6 9"
+              fill="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path d="M1.4 0L0 1.4l3.2 3.1L0 7.6 1.4 9 6 4.5 1.4 0z" />
             </svg>
           </a>
         </div>

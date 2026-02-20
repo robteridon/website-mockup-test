@@ -15,54 +15,46 @@ export default function CallToAction({
   buttonHref,
   imageUrl,
 }: CallToActionProps) {
-  const bgClass = variant === "blue" ? "bg-navy" : "bg-gold";
-  const textClass = "text-white";
+  const bgClass = variant === "blue" ? "bg-blue-light" : "bg-[#ffe087]";
 
   return (
     <section className={`${bgClass} relative overflow-hidden`}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 items-stretch">
-          {/* Text content */}
-          <div className="px-8 py-16 lg:px-16 lg:py-24 flex flex-col justify-center relative z-10">
-            <h2 className={`text-3xl lg:text-4xl font-bold ${textClass} mb-4`}>
-              {title}
-            </h2>
-            <p className={`text-lg ${textClass} opacity-90 mb-8 max-w-lg`}>
-              {description}
-            </p>
-            <div>
-              <a
-                href={buttonHref}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 border-2 border-white text-white font-semibold hover:bg-white hover:text-navy transition-all group"
-              >
-                {buttonText}
-                <svg
-                  className="w-5 h-5 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative">
+          {/* Text content - left side */}
+          <div className="py-8 lg:py-[72px] relative z-10">
+            <div className="lg:w-5/12">
+              <h2 className="text-2xl lg:text-[30px] font-bold text-[#212e38] leading-tight">
+                {title}
+              </h2>
+              <p className="text-sm lg:text-[17px] font-bold text-[#212e38] mt-6 leading-6">
+                {description}
+              </p>
+              <div className="mt-6">
+                <a
+                  href={buttonHref}
+                  className="inline-flex items-center gap-3 px-5 py-3 bg-[#212e38] text-white text-sm font-bold hover:bg-[#2d3d4d] transition-colors group"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+                  <span>{buttonText}</span>
+                  <svg
+                    className="w-2.5 h-2.5 transition-transform group-hover:translate-x-1"
+                    viewBox="0 0 6 9"
+                    fill="currentColor"
+                  >
+                    <path d="M1.4 0L0 1.4l3.2 3.1L0 7.6 1.4 9 6 4.5 1.4 0z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Image */}
-          <div className="relative min-h-[300px] lg:min-h-0">
+          {/* Image - right side, absolutely positioned on desktop */}
+          <div className="lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full h-[205px] relative overflow-hidden -mx-4 sm:-mx-6 lg:mx-0">
             <img
               src={imageUrl}
               alt=""
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale opacity-60"
             />
-            {/* Decorative overlay */}
-            <div className="absolute bottom-4 right-4 w-20 h-20 opacity-20">
-              <svg viewBox="0 0 80 80" fill="white">
-                <circle cx="20" cy="20" r="16" />
-                <rect x="44" y="4" width="32" height="32" rx="4" />
-                <polygon points="20,48 52,64 20,80" />
-              </svg>
-            </div>
           </div>
         </div>
       </div>

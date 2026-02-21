@@ -1,43 +1,16 @@
 export default function AnthropicHero() {
   return (
-    <section className="bg-ivory-dark">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-36 lg:py-52">
-        <div className="max-w-3xl">
-          <h1 className="text-[clamp(2.5rem,1.8rem+3vw,5rem)] font-light text-slate-dark leading-[1.08] tracking-[-0.02em]">
+    <section className="bg-ivory-light">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 pt-16 pb-20 lg:pt-24 lg:pb-32">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-16 items-end">
+          <h1 className="text-[clamp(2.5rem,1.8rem+3vw,5rem)] font-black text-slate-dark leading-[1.05] tracking-[-0.03em]">
             We transform how the world fights poverty
           </h1>
-          <p className="text-[clamp(1rem,0.9rem+0.4vw,1.25rem)] text-slate-light mt-8 leading-[1.6] font-light max-w-2xl">
+          <p className="text-[clamp(1.05rem,0.95rem+0.4vw,1.35rem)] text-slate-medium leading-[1.55] font-normal lg:pb-2">
             Improving lives through data, evidence, and AI — helping
             decision-makers allocate resources more effectively across the
             developing world.
           </p>
-          <div className="mt-12 flex flex-wrap items-center gap-6">
-            <a
-              href="https://www.idinsight.org/about/"
-              className="group inline-flex items-center gap-2 text-[15px] text-clay hover:text-accent transition-colors"
-            >
-              <span>Learn about our work</span>
-              <svg
-                className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-            <a
-              href="/website-mockup-test/year-in-review"
-              className="inline-flex items-center px-5 py-2.5 rounded-full border border-cloud-dark/40 text-[15px] text-slate-medium hover:border-slate-medium hover:text-slate-dark transition-colors"
-            >
-              2025 Year in Review
-            </a>
-          </div>
         </div>
       </div>
     </section>

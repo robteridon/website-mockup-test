@@ -60,45 +60,44 @@ const team = [
 export default function AnthropicTeamSection() {
   return (
     <section className="bg-ivory-light">
-      {/* Full-width divider */}
       <div className="border-t border-cloud-light" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 lg:py-32">
-        <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight mb-14">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
+        <h2 className="text-[clamp(1.5rem,1.3rem+0.8vw,2.25rem)] font-bold text-slate-dark tracking-tight mb-10">
           Meet our leadership
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
           {team.map((person) => (
             <a
               key={person.name}
               href={person.href}
               className="group block"
             >
-              <div className="relative overflow-hidden rounded-full aspect-square w-full max-w-[200px] mx-auto">
+              <div className="relative overflow-hidden rounded-full aspect-square w-full max-w-[180px] mx-auto">
                 <img
                   src={person.image}
                   alt={person.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                 />
               </div>
-              <div className="mt-5 text-center">
-                <h3 className="text-[15px] font-semibold text-slate-dark group-hover:text-clay transition-colors duration-200">
+              <div className="mt-4 text-center">
+                <h3 className="text-[15px] font-bold text-slate-dark group-hover:text-clay transition-colors duration-200">
                   {person.name}
                 </h3>
-                <span className="text-sm text-slate-light mt-1 block leading-snug">
+                <span className="text-sm text-slate-medium mt-1 block leading-snug">
                   {person.title}
                 </span>
               </div>
             </a>
           ))}
         </div>
-        <div className="mt-14 text-center">
+        <div className="mt-10 text-center">
           <a
             href="https://www.idinsight.org/about/our-people/"
-            className="group inline-flex items-center gap-2 text-sm text-clay hover:text-accent transition-colors"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-dark text-ivory-light text-sm font-medium hover:bg-slate-medium transition-colors"
           >
             <span>View all team members</span>
             <svg
-              className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"
+              className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

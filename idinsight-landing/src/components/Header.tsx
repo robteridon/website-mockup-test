@@ -83,13 +83,13 @@ const topLinks = [
 
 function IDinsightLogo({ className = "", fill = "#1c2f62" }: { className?: string; fill?: string }) {
   return (
-    <svg viewBox="0 0 164 40" className={className} aria-label="IDinsight" role="img">
+    <svg viewBox="0 0 280 50" className={className} aria-label="IDinsight" role="img">
       <text
         x="0"
-        y="29"
+        y="38"
         fontFamily="Inter, sans-serif"
         fontWeight="700"
-        fontSize="24"
+        fontSize="38"
         letterSpacing="-0.5"
         fill={fill}
       >
@@ -130,10 +130,10 @@ export default function Header() {
 
       {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <a href="https://www.idinsight.org/" className="flex-shrink-0" title="Go to homepage">
-            <IDinsightLogo className="h-8 w-auto lg:h-10" />
+            <IDinsightLogo className="h-12 w-auto lg:h-16" />
           </a>
 
           {/* Desktop Nav */}

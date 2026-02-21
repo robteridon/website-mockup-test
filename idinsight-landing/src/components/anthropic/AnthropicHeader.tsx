@@ -7,15 +7,16 @@ const navLinks = [
   { label: "Capabilities", href: "https://www.idinsight.org/services/" },
   { label: "Our Work", href: "https://www.idinsight.org/our-work/" },
   { label: "Insights", href: "https://www.idinsight.org/ideas-and-insights/" },
+  { label: "News", href: "https://www.idinsight.org/about/news/" },
 ];
 
 export default function AnthropicHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-ivory-light border-b border-cloud-light/60">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-16 lg:h-[68px]">
+    <header className="sticky top-0 z-50 bg-ivory-light">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="flex items-center justify-between h-[4.25rem]">
           {/* Logo */}
           <a
             href="https://www.idinsight.org/"
@@ -25,29 +26,32 @@ export default function AnthropicHeader() {
             <img
               src="/website-mockup-test/idinsight-logo.png"
               alt="IDinsight"
-              className="h-10 lg:h-12 w-auto mix-blend-multiply"
+              className="h-8 lg:h-9 w-auto mix-blend-multiply"
             />
           </a>
 
           {/* Desktop Nav */}
           <nav
-            className="hidden lg:flex items-center gap-8"
+            className="hidden lg:flex items-center gap-7"
             aria-label="Main navigation"
           >
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-[15px] text-slate-medium hover:text-slate-dark transition-colors"
+                className="text-[15px] text-slate-dark hover:text-slate-medium transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="https://www.idinsight.org/give/"
-              className="text-[15px] text-clay hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-slate-dark text-ivory-light text-sm font-medium hover:bg-slate-medium transition-colors"
             >
               Donate
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </nav>
 
@@ -58,32 +62,12 @@ export default function AnthropicHeader() {
             aria-label="Toggle mobile menu"
           >
             {mobileOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </button>
@@ -92,23 +76,26 @@ export default function AnthropicHeader() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-ivory-light border-t border-cloud-light/60">
+        <div className="lg:hidden bg-ivory-light border-t border-cloud-light/40">
           <nav className="px-5 py-6 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block px-3 py-3 text-[15px] text-slate-medium hover:text-slate-dark transition-colors"
+                className="block px-3 py-3 text-[15px] text-slate-dark"
               >
                 {link.label}
               </a>
             ))}
-            <div className="border-t border-cloud-light/60 pt-4 mt-4">
+            <div className="pt-4 mt-4 border-t border-cloud-light/40">
               <a
                 href="https://www.idinsight.org/give/"
-                className="block px-3 py-3 text-[15px] text-clay hover:text-accent transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-dark text-ivory-light text-sm font-medium"
               >
                 Donate
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </a>
             </div>
           </nav>

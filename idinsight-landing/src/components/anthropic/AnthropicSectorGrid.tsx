@@ -58,23 +58,22 @@ const sectors = [
 export default function AnthropicSectorGrid() {
   return (
     <section className="bg-ivory-light">
-      {/* Full-width divider */}
       <div className="border-t border-cloud-light" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 lg:py-32">
-        <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight mb-14">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
+        <h2 className="text-[clamp(1.5rem,1.3rem+0.8vw,2.25rem)] font-bold text-slate-dark tracking-tight mb-10">
           Sectors in which we work
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
-          {sectors.map((sector, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
+          {sectors.map((sector) => (
             <a
               key={sector.title}
               href={sector.href}
-              className="group block py-8 border-t border-cloud-light"
+              className="group block py-6 border-t border-cloud-light"
             >
-              <h3 className="text-[17px] font-semibold text-slate-dark group-hover:text-clay transition-colors duration-200">
+              <h3 className="text-[15px] font-bold text-slate-dark group-hover:text-clay transition-colors duration-200">
                 {sector.title}
               </h3>
-              <p className="text-sm text-slate-light leading-relaxed mt-2">
+              <p className="text-sm text-slate-medium leading-relaxed mt-2">
                 {sector.description}
               </p>
             </a>

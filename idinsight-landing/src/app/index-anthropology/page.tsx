@@ -9,7 +9,7 @@ import AnthropicFooter from "@/components/anthropic/AnthropicFooter";
 
 export default function Home() {
   return (
-    <div className="bg-ivory-light text-slate-dark">
+    <div className="bg-ivory-light text-slate-dark antialiased">
       <AnthropicHeader />
       <main id="content">
         <AnthropicHero />

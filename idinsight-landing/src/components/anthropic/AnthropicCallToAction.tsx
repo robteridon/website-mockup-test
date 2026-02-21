@@ -14,26 +14,25 @@ export default function AnthropicCallToAction({
   imageUrl,
 }: AnthropicCallToActionProps) {
   return (
-    <section className="bg-ivory-medium">
-      {/* Full-width divider */}
+    <section className="bg-ivory-light">
       <div className="border-t border-cloud-light" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight">
+            <h2 className="text-[clamp(1.5rem,1.3rem+0.8vw,2.25rem)] font-bold text-slate-dark tracking-tight">
               {title}
             </h2>
-            <p className="text-base text-slate-light mt-5 leading-relaxed max-w-lg">
+            <p className="text-base text-slate-medium mt-4 leading-relaxed max-w-lg">
               {description}
             </p>
-            <div className="mt-8">
+            <div className="mt-6">
               <a
                 href={linkHref}
-                className="group inline-flex items-center gap-2 text-[15px] text-clay hover:text-accent transition-colors"
+                className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-dark text-ivory-light text-sm font-medium hover:bg-slate-medium transition-colors"
               >
                 <span>{linkText}</span>
                 <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -48,7 +47,7 @@ export default function AnthropicCallToAction({
               </a>
             </div>
           </div>
-          <div className="overflow-hidden rounded-xl">
+          <div className="overflow-hidden rounded-2xl">
             <img
               src={imageUrl}
               alt=""

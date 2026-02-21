@@ -78,32 +78,31 @@ const socialLinks = [
 
 export default function AnthropicFooter() {
   return (
-    <footer className="bg-slate-dark text-white">
-      <div className="border-t border-cloud-dark/30" />
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-20 pb-12">
+    <footer className="bg-slate-dark text-ivory-light rounded-t-[2rem]">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 pt-16 pb-10">
         {/* Top: logo + newsletter CTA */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 pb-12 border-b border-white/10">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 pb-10 border-b border-ivory-light/10">
           <div>
-            <span className="text-xl font-semibold tracking-tight">
+            <span className="text-lg font-bold tracking-tight">
               IDinsight
             </span>
-            <p className="text-sm text-white/50 mt-2 max-w-xs">
+            <p className="text-sm text-ivory-light/50 mt-2 max-w-xs">
               Improving lives with data and evidence
             </p>
           </div>
           <a
             href="https://idinsight.us11.list-manage.com/subscribe?u=5eaborq=d9cda2c4f"
-            className="inline-flex items-center px-5 py-2.5 rounded-full border border-white/20 text-sm text-white/80 hover:border-white/40 hover:text-white transition-colors"
+            className="inline-flex items-center px-5 py-2.5 rounded-full border border-ivory-light/20 text-sm text-ivory-light/80 hover:border-ivory-light/40 hover:text-ivory-light transition-colors"
           >
             Subscribe to our newsletter
           </a>
         </div>
 
         {/* Link groups */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {footerGroups.map((group) => (
             <div key={group.heading}>
-              <h3 className="text-xs font-medium tracking-wide uppercase text-white/40 mb-5">
+              <h3 className="text-xs font-medium tracking-wide uppercase text-ivory-light/40 mb-4">
                 {group.heading}
               </h3>
               <ul className="space-y-3">
@@ -111,7 +110,7 @@ export default function AnthropicFooter() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
+                      className="text-sm text-ivory-light/70 hover:text-ivory-light transition-colors"
                     >
                       {link.label}
                     </a>
@@ -123,7 +122,7 @@ export default function AnthropicFooter() {
         </div>
 
         {/* Bottom: social + credits */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-white/10">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-ivory-light/10">
           <div className="flex items-center gap-5">
             {socialLinks.map((social) => (
               <a
@@ -131,20 +130,20 @@ export default function AnthropicFooter() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-white transition-colors"
+                className="text-ivory-light/40 hover:text-ivory-light transition-colors"
                 title={social.label}
               >
                 {social.icon}
               </a>
             ))}
           </div>
-          <p className="text-xs text-white/30">
+          <p className="text-xs text-ivory-light/30">
             Design and development by{" "}
             <a
               href="https://www.designbysoapbox.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/50 transition-colors"
+              className="hover:text-ivory-light/50 transition-colors"
             >
               Soapbox
             </a>

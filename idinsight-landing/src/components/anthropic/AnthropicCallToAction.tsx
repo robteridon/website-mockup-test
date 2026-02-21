@@ -51,7 +51,7 @@ export default function AnthropicCallToAction({
             <img
               src={imageUrl}
               alt=""
-              className="w-full h-auto object-cover aspect-[4/3]"
+              className="w-full h-auto object-contain rounded-2xl"
             />
           </div>
         </div>

@@ -2,57 +2,49 @@ const team = [
   {
     name: "Rebecca Gong Sharp",
     title: "Chief Executive Officer",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/08/Beccas-headshot-328x328.jpeg",
+    image: "/website-mockup-test/Beccas-headshot-328x328.jpeg",
     href: "https://www.idinsight.org/person/rebecca-gong-sharp/",
   },
   {
     name: "Karan Nagpal",
     title: "Regional Director, India",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/10/Untitled-design-15-328x328.png",
+    image: "/website-mockup-test/Untitled-design-15-328x328.png",
     href: "https://www.idinsight.org/person/karan-nagpal/",
   },
   {
     name: "Rivandra Royono",
     title: "Regional Director, Southeast Asia",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/10/Untitled-design-17-328x328.png",
+    image: "/website-mockup-test/Untitled-design-17-328x328.png",
     href: "https://www.idinsight.org/person/rivandra-royono/",
   },
   {
     name: "Samer Elchahabi",
     title: "Regional Director, West and North Africa",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/08/Headshot-4-328x328.png",
+    image: "/website-mockup-test/Headshot-4-328x328.png",
     href: "https://www.idinsight.org/person/samer-elchahabi/",
   },
   {
     name: "Marc Shotland",
     title: "Chief Technical and Learning Officer",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/08/Marc-Shortland-328x328.png",
+    image: "/website-mockup-test/Marc-Shortland-328x328.png",
     href: "https://www.idinsight.org/person/marc-shotland/",
   },
   {
     name: "Alison Connor",
     title: "Chief Impact Officer",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/08/Alison-328x328.png",
+    image: "/website-mockup-test/Alison-328x328.png",
     href: "https://www.idinsight.org/person/alison-connor/",
   },
   {
     name: "Nicholas Parker",
     title: "Chief Operating Officer",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/09/Untitled-design-8-328x328.png",
+    image: "/website-mockup-test/Untitled-design-8-328x328.png",
     href: "https://www.idinsight.org/person/nicholas-parker-2/",
   },
   {
     name: "Garvita Chawla",
     title: "Chief Financial Officer, Global Finance Operations",
-    image:
-      "https://www.idinsight.org/wp-content/uploads/2024/09/Untitled-design-5-328x328.png",
+    image: "/website-mockup-test/Untitled-design-5-328x328.png",
     href: "https://www.idinsight.org/person/garvita-chawla/",
   },
 ];

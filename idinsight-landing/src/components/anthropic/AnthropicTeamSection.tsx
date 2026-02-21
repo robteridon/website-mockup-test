@@ -1,4 +1,4 @@
-const team = [
+const team: { name: string; title: string; image: string; href: string; grayscale?: boolean }[] = [
   {
     name: "Rebecca Gong Sharp",
     title: "Chief Executive Officer",
@@ -46,6 +46,7 @@ const team = [
     title: "Chief Financial Officer, Global Finance Operations",
     image: "/website-mockup-test/Untitled-design-5-328x328.png",
     href: "https://www.idinsight.org/person/garvita-chawla/",
+    grayscale: true,
   },
 ];
 
@@ -68,7 +69,7 @@ export default function AnthropicTeamSection() {
                 <img
                   src={person.image}
                   alt={person.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]${person.grayscale ? " grayscale" : ""}`}
                 />
               </div>
               <div className="mt-4 text-center">

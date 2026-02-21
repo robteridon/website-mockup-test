@@ -7,16 +7,19 @@ export const metadata = {
     "Explore IDinsight's 2025 Year in Review — the next frontier for social impact.",
 };
 
+const basePath = process.env.NODE_ENV === "production" ? "/website-mockup-test" : "";
+
 export default function YearInReview() {
   return (
     <>
       <Header />
       <main id="content">
         <iframe
-          src="/year-end-review.html"
+          src={`${basePath}/year-end-review.html`}
           title="IDinsight 2025 Year in Review"
           className="w-full border-0"
           style={{ height: "calc(100vh - 120px)", minHeight: "600px" }}
+          allowFullScreen
         />
       </main>
       <Footer />

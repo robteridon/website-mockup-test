@@ -17,4 +17,4 @@
 :HL["https://www.idinsight.org/wp-content/uploads/2024/09/Untitled-design-8-328x328.png","image"]
 :HL["https://www.idinsight.org/wp-content/uploads/2024/09/Untitled-design-5-328x328.png","image"]
 :HL["https://www.idinsight.org/wp-content/uploads/2024/03/candid-seal-platinum-2024-150x150.png","image"]
-0:{"buildId":"1yK6AcYJBgziTwQGm1U2s","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"1yK6AcYJBgziTwQGm1U2s","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"index-anthropology","paramType":null,"paramKey":"index-anthropology","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

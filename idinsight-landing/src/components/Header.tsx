@@ -70,13 +70,13 @@ const mainMenuItems = [
   },
   {
     label: "Year in Review",
-    href: "/year-in-review",
+    href: "/website-mockup-test/year-in-review",
     children: [],
   },
 ];
 
 const topLinks = [
-  { label: "2025 Year in Review", href: "https://year-in-review.idinsight.org/2025/" },
+  { label: "2025 Year in Review", href: "/website-mockup-test/year-in-review" },
   { label: "IDeas Blog", href: "https://www.idinsight.org/ideas-and-insights/blog/" },
   { label: "Careers", href: "https://www.idinsight.org/about/careers/" },
 ];

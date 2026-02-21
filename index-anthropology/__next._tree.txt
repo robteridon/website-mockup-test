@@ -1,4 +1,4 @@
-:HL["/website-mockup-test/_next/static/chunks/6b846aa39f3bede1.css","style"]
+:HL["/website-mockup-test/_next/static/chunks/713b6121a601a44e.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap","style"]
 :HL["https://www.idinsight.org/wp-content/uploads/2025/12/Website-Thumbnails-2-526x296.jpg","image"]
 :HL["https://www.idinsight.org/wp-content/uploads/2026/01/Website-Thumbnails-526x296.jpg","image"]
@@ -13,4 +13,4 @@
 :HL["https://www.idinsight.org/wp-content/uploads/2024/08/Alison-328x328.png","image"]
 :HL["https://www.idinsight.org/wp-content/uploads/2024/09/Untitled-design-8-328x328.png","image"]
 :HL["https://www.idinsight.org/wp-content/uploads/2024/09/Untitled-design-5-328x328.png","image"]
-0:{"buildId":"6zbeI8BgC0vztMbirklye","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"index-anthropology","paramType":null,"paramKey":"index-anthropology","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"tnjenQTVWVQ3CxPtNE9XQ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"index-anthropology","paramType":null,"paramKey":"index-anthropology","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

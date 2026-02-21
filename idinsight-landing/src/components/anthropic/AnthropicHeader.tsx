@@ -22,9 +22,11 @@ export default function AnthropicHeader() {
             className="flex-shrink-0"
             title="Go to homepage"
           >
-            <span className="text-[22px] font-semibold tracking-tight text-slate-dark">
-              IDinsight
-            </span>
+            <img
+              src="/website-mockup-test/idinsight-logo.png"
+              alt="IDinsight"
+              className="h-6 w-auto"
+            />
           </a>
 
           {/* Desktop Nav */}

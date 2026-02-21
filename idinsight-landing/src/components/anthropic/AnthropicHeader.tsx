@@ -16,7 +16,7 @@ export default function AnthropicHeader() {
   return (
     <header className="sticky top-0 z-50 bg-ivory-light">
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[4.25rem]">
+        <div className="flex items-center justify-between py-3">
           {/* Logo */}
           <a
             href="https://www.idinsight.org/"
@@ -26,7 +26,7 @@ export default function AnthropicHeader() {
             <img
               src="/website-mockup-test/idinsight-logo.png"
               alt="IDinsight"
-              className="h-8 lg:h-9 w-auto mix-blend-multiply"
+              className="h-4 lg:h-[1.65rem] w-auto mix-blend-multiply"
             />
           </a>
 

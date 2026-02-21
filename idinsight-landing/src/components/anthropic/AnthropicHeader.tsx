@@ -25,7 +25,7 @@ export default function AnthropicHeader() {
             <img
               src="/website-mockup-test/idinsight-logo.png"
               alt="IDinsight"
-              className="h-6 w-auto"
+              className="h-10 lg:h-12 w-auto mix-blend-multiply"
             />
           </a>
 

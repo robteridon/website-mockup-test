@@ -51,19 +51,21 @@ const capabilities = [
 
 export default function AnthropicCapabilitiesGrid() {
   return (
-    <section className="bg-ivory-medium border-t border-cloud-light/60">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-20 lg:py-28">
-        <h2 className="text-2xl sm:text-3xl font-light text-slate-dark tracking-tight mb-12">
+    <section className="bg-ivory-medium">
+      {/* Full-width divider */}
+      <div className="border-t border-cloud-light" />
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 lg:py-32">
+        <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight mb-14">
           Our capabilities
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {capabilities.map((cap) => (
             <a
               key={cap.title}
               href={cap.href}
-              className="group block p-6 rounded-xl border border-cloud-light/80 hover:border-cloud-dark/40 bg-ivory-light transition-all duration-200"
+              className="group block p-6 rounded-xl bg-ivory-dark hover:bg-ivory-dark/80 transition-colors duration-200"
             >
-              <h3 className="text-[15px] font-medium text-slate-dark group-hover:text-clay transition-colors duration-200">
+              <h3 className="text-[15px] font-semibold text-slate-dark group-hover:text-clay transition-colors duration-200">
                 {cap.title}
               </h3>
               <p className="text-sm text-slate-light leading-relaxed mt-2">

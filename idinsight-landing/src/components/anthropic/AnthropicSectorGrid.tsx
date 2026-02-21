@@ -57,40 +57,26 @@ const sectors = [
 
 export default function AnthropicSectorGrid() {
   return (
-    <section className="border-t border-cloud-light/60">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-20 lg:py-28">
-        <h2 className="text-2xl sm:text-3xl font-light text-slate-dark tracking-tight mb-12">
+    <section className="bg-ivory-light">
+      {/* Full-width divider */}
+      <div className="border-t border-cloud-light" />
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 lg:py-32">
+        <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight mb-14">
           Sectors in which we work
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
-          {sectors.map((sector) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-0">
+          {sectors.map((sector, i) => (
             <a
               key={sector.title}
               href={sector.href}
-              className="group block"
+              className="group block py-8 border-t border-cloud-light"
             >
-              <h3 className="text-[17px] font-medium text-slate-dark group-hover:text-clay transition-colors duration-200">
+              <h3 className="text-[17px] font-semibold text-slate-dark group-hover:text-clay transition-colors duration-200">
                 {sector.title}
               </h3>
               <p className="text-sm text-slate-light leading-relaxed mt-2">
                 {sector.description}
               </p>
-              <span className="inline-flex items-center gap-1.5 mt-3 text-sm text-clay opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                Learn more
-                <svg
-                  className="w-3 h-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
             </a>
           ))}
         </div>

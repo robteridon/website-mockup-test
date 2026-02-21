@@ -1,17 +1,17 @@
 export default function AnthropicHero() {
   return (
-    <section className="bg-ivory-medium">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-32 lg:py-44">
+    <section className="bg-ivory-dark">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-36 lg:py-52">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-light text-slate-dark leading-[1.1] tracking-tight">
+          <h1 className="text-[clamp(2.5rem,1.8rem+3vw,5rem)] font-light text-slate-dark leading-[1.08] tracking-[-0.02em]">
             We transform how the world fights poverty
           </h1>
-          <p className="text-lg sm:text-xl text-slate-light mt-6 leading-relaxed font-light max-w-2xl">
+          <p className="text-[clamp(1rem,0.9rem+0.4vw,1.25rem)] text-slate-light mt-8 leading-[1.6] font-light max-w-2xl">
             Improving lives through data, evidence, and AI — helping
             decision-makers allocate resources more effectively across the
             developing world.
           </p>
-          <div className="mt-10 flex items-center gap-6">
+          <div className="mt-12 flex flex-wrap items-center gap-6">
             <a
               href="https://www.idinsight.org/about/"
               className="group inline-flex items-center gap-2 text-[15px] text-clay hover:text-accent transition-colors"
@@ -33,7 +33,7 @@ export default function AnthropicHero() {
             </a>
             <a
               href="/website-mockup-test/year-in-review"
-              className="inline-flex items-center px-5 py-2.5 rounded-full border border-cloud-light text-[15px] text-slate-medium hover:border-slate-medium hover:text-slate-dark transition-colors"
+              className="inline-flex items-center px-5 py-2.5 rounded-full border border-cloud-dark/40 text-[15px] text-slate-medium hover:border-slate-medium hover:text-slate-dark transition-colors"
             >
               2025 Year in Review
             </a>

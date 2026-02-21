@@ -59,12 +59,14 @@ const team = [
 
 export default function AnthropicTeamSection() {
   return (
-    <section className="border-t border-cloud-light/60">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-20 lg:py-28">
-        <h2 className="text-2xl sm:text-3xl font-light text-slate-dark tracking-tight mb-12">
+    <section className="bg-ivory-light">
+      {/* Full-width divider */}
+      <div className="border-t border-cloud-light" />
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-24 lg:py-32">
+        <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight mb-14">
           Meet our leadership
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
           {team.map((person) => (
             <a
               key={person.name}
@@ -78,8 +80,8 @@ export default function AnthropicTeamSection() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                 />
               </div>
-              <div className="mt-4 text-center">
-                <h3 className="text-[15px] font-medium text-slate-dark group-hover:text-clay transition-colors duration-200">
+              <div className="mt-5 text-center">
+                <h3 className="text-[15px] font-semibold text-slate-dark group-hover:text-clay transition-colors duration-200">
                   {person.name}
                 </h3>
                 <span className="text-sm text-slate-light mt-1 block leading-snug">
@@ -89,7 +91,7 @@ export default function AnthropicTeamSection() {
             </a>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-14 text-center">
           <a
             href="https://www.idinsight.org/about/our-people/"
             className="group inline-flex items-center gap-2 text-sm text-clay hover:text-accent transition-colors"

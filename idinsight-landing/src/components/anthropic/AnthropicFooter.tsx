@@ -79,14 +79,15 @@ const socialLinks = [
 export default function AnthropicFooter() {
   return (
     <footer className="bg-slate-dark text-white">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-16 pb-10">
+      <div className="border-t border-cloud-dark/30" />
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-20 pb-12">
         {/* Top: logo + newsletter CTA */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14 pb-10 border-b border-white/10">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16 pb-12 border-b border-white/10">
           <div>
             <span className="text-xl font-semibold tracking-tight">
               IDinsight
             </span>
-            <p className="text-sm text-white/50 mt-2">
+            <p className="text-sm text-white/50 mt-2 max-w-xs">
               Improving lives with data and evidence
             </p>
           </div>
@@ -99,10 +100,10 @@ export default function AnthropicFooter() {
         </div>
 
         {/* Link groups */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 mb-14">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12 mb-16">
           {footerGroups.map((group) => (
             <div key={group.heading}>
-              <h3 className="text-xs font-medium tracking-wide uppercase text-white/40 mb-4">
+              <h3 className="text-xs font-medium tracking-wide uppercase text-white/40 mb-5">
                 {group.heading}
               </h3>
               <ul className="space-y-3">
@@ -123,7 +124,7 @@ export default function AnthropicFooter() {
 
         {/* Bottom: social + credits */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-white/10">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             {socialLinks.map((social) => (
               <a
                 key={social.label}

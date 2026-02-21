@@ -15,13 +15,15 @@ export default function AnthropicCallToAction({
 }: AnthropicCallToActionProps) {
   return (
     <section className="bg-ivory-medium">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16 lg:py-24">
+      {/* Full-width divider */}
+      <div className="border-t border-cloud-light" />
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-light text-slate-dark tracking-tight">
+            <h2 className="text-[clamp(1.75rem,1.5rem+1vw,2.5rem)] font-bold text-slate-dark tracking-tight">
               {title}
             </h2>
-            <p className="text-base text-slate-light mt-4 leading-relaxed max-w-lg">
+            <p className="text-base text-slate-light mt-5 leading-relaxed max-w-lg">
               {description}
             </p>
             <div className="mt-8">
